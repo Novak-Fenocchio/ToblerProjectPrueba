@@ -7,7 +7,7 @@
     <title>PROJETO MVC</title>
 
     <!--===========================
-PLUGINS DE CSS
+          PLUGINS DE CSS
 ===============================-->
 
     <!-- Latest compiled and minified CSS -->
@@ -46,13 +46,13 @@ PLUGINS DE CSS
         <div class="container">
             <ul class="nav nav-justified py-2 nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" href="registo.html">Regitos</a>
+                    <a class="nav-link" href="index.php?pagina=registo">Regitos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ingreso.html">Ingresos</a>
+                    <a class="nav-link" href="index.php?pagina=ingresos">Ingresos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="index.php?inicio">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Salir</a>
