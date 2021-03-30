@@ -60,39 +60,6 @@ PLUGINS DE CSS
             </ul>
         </div>
     </div>
-    <!--===========================
-        Contenido
-    ===============================-->
-    <div class="container-fluid">
-        <div class="container py-5">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
      <!--===========================
              Contenido
     ===============================-->
@@ -100,8 +67,7 @@ PLUGINS DE CSS
     <div class="container-fluid">
         <div class="container py-5">
         <?php
-            
-            
+         include "paginas/inicio.php";
         ?>
         </div>
     </div>
