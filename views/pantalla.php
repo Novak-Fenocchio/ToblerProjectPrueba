@@ -93,6 +93,17 @@ PLUGINS DE CSS
             </table>
         </div>
     </div>
+     <!--===========================
+             Contenido
+    ===============================-->
 </body>
+    <div class="container-fluid">
+        <div class="container py-5">
+        <?php
+            
+            
+        ?>
+        </div>
+    </div>
 
 </html>
