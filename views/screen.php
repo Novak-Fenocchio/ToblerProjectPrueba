@@ -7,15 +7,15 @@
     <title>PROJETO MVC</title>
 
     <!--===========================
-          PLUGINS DE CSS
-===============================-->
+            CSS PLUGINS
+    ===============================-->
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!--===========================
-        PLUGINS DE JS
-     ===============================-->
+            JS PLUGINS
+    ===============================-->
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,104 +34,108 @@
 <body>
 
     <!--===========================
-        LOGOTIPO
+            LOGO
     ===============================-->
     <div class="container-fluid">
-        <h3 class="text-center py-3">LOGO</h3>
+        <h3 class="text-center py-3">TOBLER</h3>
     </div>
 
     <!--===========================
-        BOTONERA
+        BOTTON
     ===============================-->
     <div class="container-fluid bg-light">
         <div class="container">
             <ul class="nav nav-justified py-2 nav-pills">
-                <!-- Ativar botões com variaveis get -->
-                <?php if (isset($_GET["pagina"])) : ?>
+                <!-- buttons with get variables -->
+                <?php if (isset($_GET["page"])) : ?>
 
-                    <?php if ($_GET["pagina"] == "registo") : ?>
+                    <?php if ($_GET["page"] == "register") : ?>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=registo">Regitos</a>
+                            <a class="nav-link active" href="index.php?page=register">Regitos</a>
                         </li>
 
                     <?php else : ?>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=registo">Regitos</a>
+                            <a class="nav-link" href="index.php?page=register">Regito</a>
                         </li>
 
                     <?php endif ?>
 
-                    <?php if ($_GET["pagina"] == "ingreso") : ?>
+                    <?php if ($_GET["page"] == "enter") : ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=ingreso">Ingreso</a>
+                            <a class="nav-link active" href="index.php?page=enter">Entrar</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=ingreso">Ingreso</a>
+                            <a class="nav-link" href="index.php?page=enter">Entrar</a>
                         </li>
                     <?php endif ?>
 
-                    <?php if ($_GET["pagina"] == "inicio") : ?>
+                    <?php if ($_GET["page"] == "home") : ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=inicio">Inicio</a>
+                            <a class="nav-link active" href="index.php?page=home">Início</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=inicio">Inicio</a>
+                            <a class="nav-link" href="index.php?page=home">Início</a>
                         </li>
                     <?php endif ?>
-                
-                    <?php if ($_GET["pagina"] == "salir") : ?>
+
+                    <?php if ($_GET["page"] == "exit") : ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=salir">Sair</a>
+                            <a class="nav-link active" href="index.php?page=exit">Sair</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=salir">Sair</a>
+                            <a class="nav-link" href="index.php?page=exit">Sair</a>
                         </li>
                     <?php endif ?>
 
                 <?php else : ?>
 
-                    <!--GET: $_GET["VARIAVEL"]-->
+                    <!--GET: $_GET["VARIABLES"]-->
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php?pagina=registo">Regitos</a>
+                        <a class="nav-link active" href="index.php?page=register">Registo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?pagina=ingreso">Ingresos</a>
+                        <a class="nav-link" href="index.php?page=enter">Entrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?pagina=inicio">Inicio</a>
+                        <a class="nav-link" href="index.php?page=home">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?pagina=salir">Salir</a>
+                        <a class="nav-link" href="index.php?page=exit">Sair</a>
                     </li>
 
                 <?php endif ?>
-                
+
             </ul>
         </div>
     </div>
     <!--===========================
-             Contenido
+        Container/White page
     ===============================-->
     <div class="container-fluid">
         <div class="container py-5">
             <?php
-            if (isset($_GET["pagina"])) {
+            if (isset($_GET["page"])) {
                 if (
-                    $_GET["pagina"] == "registo" ||
-                    $_GET["pagina"] == "ingreso" ||
-                    $_GET["pagina"] == "inicio" ||
-                    $_GET["pagina"] == "salir"
+                    $_GET["page"] == "register" ||
+                    $_GET["page"] == "enter" ||
+                    $_GET["page"] == "home" ||
+                    $_GET["page"] == "exit"
                 ) {
 
-                    include "paginas/" . $_GET["pagina"] . ".php";
+                    include "page/" . $_GET["page"] . ".php";
+                } else {
+
+                    include "page/error404.php";
                 }
             } else {
-                include "paginas/registo.php";
+
+                include "page/register.php";
             }
             ?>
         </div>

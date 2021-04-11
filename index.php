@@ -1,6 +1,7 @@
 <?php
 
-require_once "controller/pantalla.controlador.php";
+require_once "controller/screen.controller.php";
+require_once "controller/forms.controller.php";
 
-$pantalla = new ControladorPantalla();
-$pantalla->ctrTraerPantalla();
+$screen = new ControllerScreen();
+$screen->ctrBringScreen();
