@@ -128,14 +128,14 @@
                     $_GET["page"] == "exit"
                 ) {
 
-                    include "page/" . $_GET["page"] . ".php";
+                    include "pages/" . $_GET["page"] . ".php";
                 } else {
 
-                    include "page/error404.php";
+                    include "pages/error404.php";
                 }
             } else {
 
-                include "page/register.php";
+                include "pages/register.php";
             }
             ?>
         </div>
